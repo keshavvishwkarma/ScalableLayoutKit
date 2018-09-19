@@ -1,0 +1,6 @@
+framework module ScalableLayoutKit {
+  umbrella header "ScalableLayoutKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

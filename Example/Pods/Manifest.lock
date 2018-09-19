@@ -1,0 +1,16 @@
+PODS:
+  - ScalableLayoutKit (1.0)
+
+DEPENDENCIES:
+  - ScalableLayoutKit (from `../`)
+
+EXTERNAL SOURCES:
+  ScalableLayoutKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ScalableLayoutKit: 77c6dd0f0dd3c2c45471bcf3901e6b1c7b86921a
+
+PODFILE CHECKSUM: 2d53cf171e153d32b8d8e08b48203913adc23171
+
+COCOAPODS: 1.5.3
