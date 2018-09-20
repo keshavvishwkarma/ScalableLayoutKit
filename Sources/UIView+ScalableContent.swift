@@ -97,15 +97,15 @@ extension NSAttributedString {
 }
     
 #if swift(>=4.2)
-        let AttributedFontName   = NSAttributedString.Key.font
-        let AttributedAttachment = AttributeName.attachment
+        let AttributedFont       = NSAttributedString.Key.font
+        let AttributedAttachment = NSAttributedString.Key.attachment
     #elseif swift(>=4.0)
-        let AttributedFontName   = NSAttributedStringKey.font
-        let AttributedAttachment = AttributeName.attachment
+        let AttributedFont       = NSAttributedStringKey.font
+        let AttributedAttachment = NSAttributedStringKey.attachment
     #else
         let AttributedFont       = NSFontAttributeName
         let AttributedAttachment = NSAttachmentAttributeName
-#endif
+#endif 
     
 
 extension NSMutableAttributedString {
