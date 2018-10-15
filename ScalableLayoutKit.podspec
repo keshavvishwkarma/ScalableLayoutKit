@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name      = 'ScalableLayoutKit'
   s.version   = '1.0'
-  s.summary   = 'A lightweight, pure-Swift library for scaling the conetent across any screen size to make consistent UI.'
+  s.summary   = 'A lightweight, pure-Swift library for scaling the consistent across any screen size to make consistent UI.'
   s.homepage  = 'https://github.com/keshavvishwkarma/ScalableLayoutKit'
   s.license   = { :type => 'MIT', :file => 'LICENSE' }
   s.author    = { 'keshavvishwkarma' => 'keshavvbe@gmail.com' }
