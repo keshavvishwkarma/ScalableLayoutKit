@@ -33,11 +33,18 @@ extension UILabel {
     }
 }
 
-extension UIButton {
+extension UIButton
+{
     open override func scaledContent(by ratio: CGFloat) {
         self.titleLabel?.scaledContent(by: ratio)
 
-        UIControlState.all.forEach {
+        #if swift(>=4.2)
+            let allControlStates = UIControl.State.all
+        #else
+            let allControlStates = UIControlState.all
+        #endif
+        
+        allControlStates.forEach {
             // For attributed title buttons ...
             if let attributedString = self.attributedTitle(for: $0 ) {
                 self.setAttributedTitle(attributedString.scaledContent(by: ratio), for: $0)
@@ -70,11 +77,17 @@ extension UITextView {
     }
 }
 
-extension UIControlState {
-    public static var all: [UIControlState] = [ .normal, highlighted, disabled, selected, application, reserved ]
-    //    @available(iOS 9.0, *)
-    //    public static var focused: UIControlState { get } // Applicable
-}
+#if swift(>=4.2)
+    extension UIControl.State {
+        public static var all: [UIControl.State] = [ .normal, highlighted, disabled, selected, application, reserved ]
+    }
+#else
+    extension UIControlState {
+        public static var all: [UIControlState] = [ .normal, highlighted, disabled, selected, application, reserved ]
+        //    @available(iOS 9.0, *)
+        //    public static var focused: UIControlState { get } // Applicable
+    }
+#endif
 
 extension UIFont {
     public func scaledFont(by ratio: CGFloat) -> UIFont {

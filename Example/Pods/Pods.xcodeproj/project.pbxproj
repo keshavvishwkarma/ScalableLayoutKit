@@ -421,38 +421,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1F2C148B713B299D73616A0F8F017ABB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A449648D9F7488E32562273A2E46DC3F /* ScalableLayoutKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ScalableLayoutKit/ScalableLayoutKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ScalableLayoutKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ScalableLayoutKit/ScalableLayoutKit.modulemap";
-				PRODUCT_MODULE_NAME = ScalableLayoutKit;
-				PRODUCT_NAME = ScalableLayoutKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		36220CE2AA805A59F36EC5F64535A3AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5729E2A1EF4ABF0686E0E4B5ABDF30C7 /* Pods-ScalableLayoutKit_Tests.release.xcconfig */;
@@ -587,7 +555,7 @@
 			};
 			name = Debug;
 		};
-		9F483E814B5DF0DC2AA58C68F5C48F4C /* Release */ = {
+		9F09BF8D047B589BE05F4DA14D5ABE4F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A449648D9F7488E32562273A2E46DC3F /* ScalableLayoutKit.xcconfig */;
 			buildSettings = {
@@ -611,15 +579,13 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 3.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		B6027ECF55D284867FF94F5BF137B512 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -748,6 +714,40 @@
 			};
 			name = Debug;
 		};
+		EF8DCF8FAC74E249845B4EDEFF9EBAB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A449648D9F7488E32562273A2E46DC3F /* ScalableLayoutKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ScalableLayoutKit/ScalableLayoutKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ScalableLayoutKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ScalableLayoutKit/ScalableLayoutKit.modulemap";
+				PRODUCT_MODULE_NAME = ScalableLayoutKit;
+				PRODUCT_NAME = ScalableLayoutKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -781,8 +781,8 @@
 		AA3DDAB06E2EA66B8F58EEF4D1490094 /* Build configuration list for PBXNativeTarget "ScalableLayoutKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1F2C148B713B299D73616A0F8F017ABB /* Debug */,
-				9F483E814B5DF0DC2AA58C68F5C48F4C /* Release */,
+				9F09BF8D047B589BE05F4DA14D5ABE4F /* Debug */,
+				EF8DCF8FAC74E249845B4EDEFF9EBAB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
