@@ -32,7 +32,7 @@ class ViewController: UIViewController {
 }
 ```
 
-If you end up using ScalableLayoutKit in production, I'd love to hear from you. You can reach me through [Twitter] or [Email].
+If you use `ScalableLayoutKit` in your app, I'd love to hear about it from you. You can reach me through [Twitter] or [Email].
 
 ## Example
 
