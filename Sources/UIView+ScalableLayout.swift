@@ -13,13 +13,23 @@ import UIKit
 extension UIView {
     
     public func scaledLayoutDesign(from srcScreen: Screen = .iPhone6) {
-        let ratio : CGFloat = srcScreen.scaledWidth()
-        if ratio == 1.0 {
+        if srcScreen.scaledWidth() == 1.0 && srcScreen.scaledHeight() == 1.0 {
             return
         }
 
         traceConstraint(basedOn: srcScreen)
+        
+        let ratio = min( srcScreen.scaledWidth(), srcScreen.scaledHeight())
+        if ratio == 1.0 {
+            return
+        }
+
         scaledContent(by: ratio)
+        
+        // Note: This is to prevent content scaling of UIButton's subviews again.
+        if self is UIButton {
+            return
+        }
         
         for v in subviews {
             v.scaledLayoutDesign(from: srcScreen)
@@ -49,6 +59,11 @@ extension UIView {
                 DefaultLogger.logger.log("V - Top");
                 cons.constant = srcScreen.scaledHeight( value: cons.constant)
             }
+            else if cons.firstAttribute == .centerY || cons.secondAttribute == .centerY
+            {
+                DefaultLogger.logger.log("V - centerY");
+                cons.constant = srcScreen.scaledHeight( value: cons.constant)
+            }
             else if cons.firstAttribute == .bottom && cons.secondAttribute == .top || cons.firstAttribute == .bottom && cons.secondAttribute == .top
             {
                 DefaultLogger.logger.log("V - Bottom - Top");
@@ -67,6 +82,11 @@ extension UIView {
             else if cons.firstAttribute == .trailing || cons.secondAttribute == .trailing
             {
                 DefaultLogger.logger.log("H - Trailing");
+                cons.constant = srcScreen.scaledWidth( value: cons.constant)
+            }
+            else if cons.firstAttribute == .centerX || cons.secondAttribute == .centerX
+            {
+                DefaultLogger.logger.log("H - centerX");
                 cons.constant = srcScreen.scaledWidth( value: cons.constant)
             }
             else if cons.firstAttribute == .leading && cons.secondAttribute == .trailing || cons.firstAttribute == .trailing && cons.secondAttribute == .leading
