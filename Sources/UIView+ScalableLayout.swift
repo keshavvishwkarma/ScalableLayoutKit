@@ -20,11 +20,9 @@ extension UIView {
         traceConstraint(basedOn: srcScreen)
         
         let ratio = min( srcScreen.scaledWidth(), srcScreen.scaledHeight())
-        if ratio == 1.0 {
-            return
+        if ratio != 1.0 {
+           scaledContent(by: ratio)
         }
-
-        scaledContent(by: ratio)
         
         // Note: This is to prevent content scaling of UIButton's subviews again.
         if self is UIButton {
