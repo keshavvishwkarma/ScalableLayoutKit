@@ -13,10 +13,12 @@ import UIKit
 public enum Screen {
     case iPhone4
     case iPhone5, iPhoneSE
-    case iPhone6, iPhone6Plus
+    case iPhone6, iPhone6Plus, iPhone6s, iPhone6sPlush
     case iPhone7, iPhone7Plus
     case iPhone8, iPhone8Plus
     case iPhoneX
+    case iPhoneXS, iPhoneXR, iPhoneXSMax
+    case iPhone11, iPhone11Pro, iPhone11ProMax
     case iPhoneScreen(CGSize)
 }
 
@@ -26,9 +28,10 @@ extension Screen
         switch self {
         case .iPhone4: return UIScreen.iPhone4Size
         case .iPhone5, .iPhoneSE: return UIScreen.iPhone5Size
-        case .iPhone6, .iPhone7, .iPhone8: return UIScreen.iPhone6Size
-        case .iPhone6Plus, .iPhone7Plus, .iPhone8Plus: return UIScreen.iPhone6PlusSize
-        case .iPhoneX : return UIScreen.iPhoneXSize
+        case .iPhone6, .iPhone6s, .iPhone7, .iPhone8: return UIScreen.iPhone6Size
+        case .iPhone6Plus, .iPhone6sPlush, .iPhone7Plus, .iPhone8Plus: return UIScreen.iPhone6PlusSize
+        case .iPhoneX, .iPhoneXS, .iPhone11Pro : return UIScreen.iPhoneXSize
+        case .iPhoneXR, .iPhoneXSMax, .iPhone11, .iPhone11ProMax : return UIScreen.iPhoneXRSize
         case let .iPhoneScreen(size): return size
         }
     }
@@ -61,7 +64,8 @@ extension UIScreen {
     static var iPhone6Size: CGSize { return CGSize(width: 375, height: 667.0) }
     static var iPhone6PlusSize: CGSize { return CGSize(width:414.0, height: 736.0) }
     static var iPhoneXSize: CGSize { return CGSize(width:375.0, height: 812.0) }
-    
+    static var iPhoneXRSize: CGSize { return CGSize(width:414.0, height:896.0) }
+
 }
 
 #endif
