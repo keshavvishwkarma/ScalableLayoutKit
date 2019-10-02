@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.author    = { "keshavvishwkarma" => "keshavvbe@gmail.com" }
   s.social_media_url   = "https://twitter.com/keshav_Vishwkar"
 
-  s.swift_version = ['4.2', '5.0', '5.1']
+  s.swift_version = "4.2"
 
   s.ios.deployment_target  = "8.0"
   s.source    = { :git => "https://github.com/keshavvishwkarma/ScalableLayoutKit.git", :tag => s.version }
