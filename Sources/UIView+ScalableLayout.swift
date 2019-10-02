@@ -45,52 +45,52 @@ extension UIView {
             if cons.firstAttribute == .height && cons.secondAttribute == .notAnAttribute
             {
                 DefaultLogger.logger.log("V - Height");
-                cons.constant = srcScreen.scaledHeight( value: cons.constant)
+                cons.constant = srcScreen.scaledHeight(cons.constant)
             }
             else if cons.firstAttribute == .bottom || cons.secondAttribute == .bottom
             {
                 DefaultLogger.logger.log("V - Bottom");
-                cons.constant = srcScreen.scaledHeight( value: cons.constant)
+                cons.constant = srcScreen.scaledHeight(cons.constant)
             }
             else if cons.firstAttribute == .top || cons.secondAttribute == .top
             {
                 DefaultLogger.logger.log("V - Top");
-                cons.constant = srcScreen.scaledHeight( value: cons.constant)
+                cons.constant = srcScreen.scaledHeight(cons.constant)
             }
             else if cons.firstAttribute == .centerY || cons.secondAttribute == .centerY
             {
                 DefaultLogger.logger.log("V - centerY");
-                cons.constant = srcScreen.scaledHeight( value: cons.constant)
+                cons.constant = srcScreen.scaledHeight(cons.constant)
             }
             else if cons.firstAttribute == .bottom && cons.secondAttribute == .top || cons.firstAttribute == .bottom && cons.secondAttribute == .top
             {
                 DefaultLogger.logger.log("V - Bottom - Top");
-                cons.constant = srcScreen.scaledHeight( value: cons.constant)
+                cons.constant = srcScreen.scaledHeight(cons.constant)
             }
             else if cons.firstAttribute == .width && cons.secondAttribute == .notAnAttribute
             {
                 DefaultLogger.logger.log("H - Width");
-                cons.constant = srcScreen.scaledWidth( value: cons.constant)
+                cons.constant = srcScreen.scaledWidth(cons.constant)
             }
             else if cons.firstAttribute == .leading || cons.secondAttribute == .leading
             {
                 DefaultLogger.logger.log("H - Leading");
-                cons.constant = srcScreen.scaledWidth( value: cons.constant)
+                cons.constant = srcScreen.scaledWidth(cons.constant)
             }
             else if cons.firstAttribute == .trailing || cons.secondAttribute == .trailing
             {
                 DefaultLogger.logger.log("H - Trailing");
-                cons.constant = srcScreen.scaledWidth( value: cons.constant)
+                cons.constant = srcScreen.scaledWidth(cons.constant)
             }
             else if cons.firstAttribute == .centerX || cons.secondAttribute == .centerX
             {
                 DefaultLogger.logger.log("H - centerX");
-                cons.constant = srcScreen.scaledWidth( value: cons.constant)
+                cons.constant = srcScreen.scaledWidth(cons.constant)
             }
             else if cons.firstAttribute == .leading && cons.secondAttribute == .trailing || cons.firstAttribute == .trailing && cons.secondAttribute == .leading
             {
                 DefaultLogger.logger.log("H - Leading - Trailing");
-                cons.constant = srcScreen.scaledWidth( value: cons.constant)
+                cons.constant = srcScreen.scaledWidth(cons.constant)
             }
             else{
                 DefaultLogger.logger.log(cons);
@@ -100,4 +100,3 @@ extension UIView {
 }
 
 #endif
-
