@@ -19,7 +19,7 @@ public enum Screen {
     case iPhoneX
     case iPhoneXS, iPhoneXR, iPhoneXSMax
     case iPhone11, iPhone11Pro, iPhone11ProMax
-    case iPhoneScreen(CGSize)
+    case newScreen(CGSize)
 }
 
 extension Screen
@@ -32,17 +32,17 @@ extension Screen
         case .iPhone6Plus, .iPhone6sPlush, .iPhone7Plus, .iPhone8Plus: return UIScreen.iPhone6PlusSize
         case .iPhoneX, .iPhoneXS, .iPhone11Pro : return UIScreen.iPhoneXSize
         case .iPhoneXR, .iPhoneXSMax, .iPhone11, .iPhone11ProMax : return UIScreen.iPhoneXRSize
-        case let .iPhoneScreen(size): return size
+        case let .newScreen(size): return size
         }
     }
     
-    public func scaledWidth(_ value:CGFloat = 1.0, destScreen:Screen = .iPhoneScreen(UIScreen.size))->CGFloat {
+    public func scaledWidth(_ value:CGFloat = 1.0, destScreen:Screen = .newScreen(UIScreen.size))->CGFloat {
         let widthFraction = destScreen.size.width / size.width
         DefaultLogger.logger.log("WF: " + widthFraction.description + " WS: " + (value*widthFraction).description )
         return value*widthFraction
     }
     
-    public func scaledHeight(_ value:CGFloat = 1.0, destScreen:Screen = .iPhoneScreen(UIScreen.size))->CGFloat {
+    public func scaledHeight(_ value:CGFloat = 1.0, destScreen:Screen = .newScreen(UIScreen.size))->CGFloat {
         let heightFraction = destScreen.size.height / size.height
         DefaultLogger.logger.log("HF: " + heightFraction.description + " HS: " + (value*heightFraction).description )
         return value*heightFraction
